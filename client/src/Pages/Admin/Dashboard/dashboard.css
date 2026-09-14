@@ -1,0 +1,331 @@
+.dashboard-root {
+  display: flex;
+  min-height: 100vh;
+  background-color: black;
+  font-family: "Cinzel", sans-serif, monospace;
+}
+
+.dashboard-sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  border-right: 1px solid orangered;
+  padding: 100px 20px 20px;
+}
+
+.dashboard-logo {
+  color: orangered;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.dashboard-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dashboard-link {
+  padding: 12px 16px;
+  color: rgba(255, 255, 255, 0.814);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.dashboard-link:hover {
+  background-color: rgba(255, 69, 0, 0.1);
+  color: orangered;
+}
+
+.dashboard-link.active {
+  background-color: orangered;
+  color: black;
+  font-weight: 700;
+}
+
+.dashboard-main {
+  flex: 1;
+  padding: 100px 40px 40px;
+  color: white;
+}
+
+.dashboard-heading {
+  color: orangered;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-loading {
+  color: white;
+  padding: 100px 40px;
+}
+
+.stat-cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background-color: #0d0d0d;
+  border: 1px solid orangered;
+  border-radius: 15px;
+  padding: 24px 32px;
+  min-width: 180px;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: orangered;
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 4px;
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 69, 0, 0.2);
+}
+
+.dashboard-table th {
+  color: orangered;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.table-product-image {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px;
+}
+
+.table-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.table-icon-edit,
+.table-icon-delete {
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.table-icon-edit {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.table-icon-edit:hover {
+  color: orangered;
+}
+
+.table-icon-delete {
+  color: #cc2b2b;
+}
+
+.table-icon-delete:hover {
+  color: #ff3b3b;
+}
+
+.role-badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.role-badge.admin {
+  background: orangered;
+  color: black;
+  font-weight: 700;
+}
+
+.table-delete-btn {
+  background-color: #cc2b2b;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.2s ease;
+}
+
+.table-delete-btn:hover {
+  background-color: #ff3b3b;
+}
+
+.dashboard-form {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.dashboard-form .form-group label {
+  display: block;
+  color: orangered;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.dashboard-form input,
+.dashboard-form textarea {
+  width: 100%;
+  background-color: black;
+  color: white;
+  border: 1px solid orangered;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-family: inherit;
+  outline: none;
+}
+
+.image-preview {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  background: white;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.dashboard-submit-btn {
+  background-color: orangered;
+  color: black;
+  font-weight: 700;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dashboard-submit-btn:hover {
+  background-color: white;
+}
+
+.dashboard-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.dashboard-form-message {
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255, 69, 0, 0.1);
+  color: orangered;
+  font-size: 0.9rem;
+}
+
+.nav-dashboard-btn {
+  background-color: transparent;
+  border: 1px solid orangered;
+  color: orangered;
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.nav-dashboard-btn:hover {
+  background-color: orangered;
+  color: black;
+}
+
+.admin-text {
+  color: orangered;
+  font-weight: 700;
+}
+
+.dashboard-dropdown-toggle {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-submenu {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  gap: 0.3rem;
+  margin-top: 0.2rem;
+}
+
+.dashboard-sublink {
+  padding: 10px 14px;
+  color: #ffffff9b;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.dashboard-sublink:hover {
+  background-color: rgba(255, 69, 0, 0.1);
+  color: orangered;
+}
+
+.dashboard-sublink.active {
+  background-color: orangered;
+  color: black;
+  font-weight: 700;
+}
+
+.gallery-preview-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.gallery-preview-thumb {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  background-color: white;
+  border: 1px solid orangered;
+  border-radius: 8px;
+}
+
+.no-gallery-text {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: orangered;
+  cursor: pointer;
+  margin-right: 10px;
+}

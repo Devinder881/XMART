@@ -1,0 +1,168 @@
+.windowOverlay {
+  position: fixed;
+  inset: 0;
+  background: #00000090;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-window {
+  width: 100%;
+  max-width: 800px;
+  max-height: 85vh;
+
+  background: #0d0d0d;
+  border: 1px solid orangered;
+  border-radius: 15px;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: "Cinzel", sans-serif, monospace;
+  color: white;
+  box-sizing: border-box;
+}
+
+
+
+.modal-window::-webkit-scrollbar {
+  width: 6px;
+}
+.modal-window::-webkit-scrollbar-track {
+  background: transparent;
+}
+.modal-window::-webkit-scrollbar-thumb {
+  background: orangered;
+  border-radius: 10px;
+}
+
+
+.modal-product-image {
+  width: 100%;
+  height: 320px;
+  flex-shrink: 0;
+
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border-radius: 15px 15px 0 0;
+}
+
+.modal-product-details {
+  padding: 24px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.modal-product-details h2 {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.modal-product-details h3:nth-of-type(1) {
+  color: rgba(255, 69, 0, 0.8);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.modal-product-details p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 4px;
+}
+
+.modal-product-details h3:last-of-type {
+  color: orangered;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+
+
+
+
+/* Responsive — narrower viewports */
+@media (max-width: 600px) {
+  .modal-product-image {
+    height: 220px;
+  }
+
+  .modal-product-details {
+    padding: 18px 20px 20px;
+  }
+
+  .modal-product-details h2 {
+    font-size: 1.3rem;
+  }
+}
+
+.modal-image-wrapper {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+}
+
+.modal-product-image {
+  width: 80%;
+  height: 320px;
+  flex-shrink: 0;
+
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border-radius: 15px 0 0 0;
+  transition: background-image 0.2s ease;
+}
+
+.modal-thumbnail-column {
+  width: 20%;
+  height: 320px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 4px;
+}
+
+.modal-thumbnail {
+  width: 100%;
+  flex: 1; /* each thumbnail takes an equal share of the column's height */
+
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.modal-thumbnail:hover {
+  transform: scale(1.03);
+}
+
+.modal-thumbnail.active {
+  border-color: orangered;
+}

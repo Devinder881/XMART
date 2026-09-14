@@ -1,0 +1,136 @@
+.root-footer {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.backToTop {
+  width: 100%;
+  padding: 10px 0;
+
+  color: orangered;
+  box-sizing: border-box;
+
+  text-align: center;
+  text-transform: capitalize;
+
+  font-size: clamp(10px, 1.5vw, 16px);
+  border: 1px solid transparent;
+  border-bottom: 1px solid orangered;
+
+  transition: all 0.3s ease;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.footer-container {
+  width: 80%;
+  height: fit-content;
+
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+  transition: all 0.3s ease-out;
+}
+
+.footer-boxes {
+  width: 100%;
+  height: 100%;
+
+  padding: clamp(10px, 2vw, 25px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.box-heading {
+  color: whitesmoke;
+  font-size: 28px;
+  font-weight: 700;
+
+  margin-bottom: 10px;
+  font-size: clamp(8px, 1.5vw, 16px);
+}
+
+.box-items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.box-item {
+  color: orangered;
+
+  margin-bottom: clamp(7px, 1vw, 10px);
+  font-size: 14px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.disclaimer-text {
+  width: 100%;
+  padding: 10px 0;
+
+  color: orangered;
+  font-size: clamp(8px, 1.5vw, 14px);
+
+  text-align: center;
+  text-transform: capitalize;
+
+  border-top: 1px solid orangered;
+  opacity: 0.9;
+}
+
+/* Hover Classses  */
+.backToTop:hover {
+  border: 1px solid orangered;
+  box-shadow: 0 0 25px orangered;
+}
+
+.box-item:hover {
+  color: whitesmoke;
+  text-decoration: underline;
+}
+
+/* screen sizing  */
+
+@media (max-width: 950px) {
+  .footer-container {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .box-heading {
+    font-size: clamp(14px, 1vw, 18px);
+  }
+
+  .box-item {
+    font-size: clamp(12px, 1vw, 16px);
+  }
+}
+
+@media (max-width: 450px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-boxes,
+  .box-heading,
+  .box-items,
+  .box-item {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}

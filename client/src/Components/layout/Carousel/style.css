@@ -1,0 +1,170 @@
+.carousel-root {
+  width: 100%;
+  height: 500px;
+
+  background-color: black;
+  position: relative;
+  margin-top: 80px;
+  
+  display: flex;
+  overflow: hidden;
+
+  cursor: grab;
+}
+
+.carousel-root.dragging {
+  cursor: grabbing;
+}
+.carousel-root-Mobile {
+  height: auto;
+}
+
+.carouselArrow {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  color: gray;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  font-size: 0.8em;
+  padding: 10px;
+  background-color: rgb(255, 255, 255, 0.1);
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.right {
+  color: #343434;
+  right: 2rem;
+}
+
+.left {
+  color: #343434;
+  left: 2rem;
+}
+
+.carouselArrow:hover {
+  color: #343434;
+  background-color: #ffffff4d;
+  border: 1px solid #343434;
+}
+
+.banner-root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.3s ease-out;
+}
+
+.banner {
+  flex: 0 0 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+.bannerMobile {
+  height: max-content;
+  padding: 0px;
+}
+
+.imageBanner {
+  width: 100%;
+  height: 100%;
+
+  background-position: center;
+  background-size: cover;
+}
+
+.imageBannerMobile {
+  height: 70vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.detailedBanner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.title,
+.description {
+  width: 50%;
+  background: none;
+  text-align: center;
+  font-weight: 900;
+}
+
+.title {
+  font-size: clamp(20px, 4rem, 46px);
+}
+.description {
+  font-size: clamp(12px, 4rem, 28px);
+  font-weight: 500;
+}
+
+.shopLink {
+  padding: 10px;
+  font-size: 1.5em;
+  background-color: black;
+  border: 1px solid #4d4d4d;
+  border-radius: 15px;
+  transition: all 0.2s ease;
+}
+
+.shopLink:hover {
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+@media (max-width: 1350px) {
+  .title {
+    font-size: 2.5em;
+  }
+  .description {
+    font-size: 1.3em;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 750px) {
+  .detailedBanner {
+    display: none;
+  }
+
+  .carouselArrow {
+    width: 2em;
+    height: 5em;
+
+    color: #343434;
+    background-color: rgb(255, 255, 255, 0.1);
+
+    border: 1px solid black;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  .right {
+    border-right: none;
+    border-radius: 15px 0 0 15px;
+    right: 0;
+  }
+
+  .left {
+    border-left: none;
+    border-radius: 0 15px 15px 0;
+    left: 0;
+  }
+}

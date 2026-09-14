@@ -1,0 +1,245 @@
+.cart-root {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #070707;
+  padding: 100px 5% 60px;
+  font-family: "Cinzel", sans-serif, monospace;
+}
+
+.cart-heading {
+  color: #ff4500;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cart-empty {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cart-row {
+  background-color: #0d0d0d;
+  border: 1px solid orangered;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cart-row-main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.cart-row-image {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.cart-row-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.5rem;
+
+  min-width: 0;
+}
+
+.cart-row-name {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.cart-row-button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart-row-qty {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cart-row-qty button {
+  width: 35px;
+  height: 35px;
+
+  background-color: black;
+  color: orangered;
+
+  border: 2px solid orangered;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart-row-qty button:active {
+  background: rgba(255, 154, 118, 0.907);
+  color: orangered;
+}
+
+.cart-row-qty span {
+  min-width: 20px;
+  text-align: center;
+  color: white;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.cart-row-remove {
+  background-color: #cc2b2b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.cart-row-remove:active {
+  color: #cc2b2b;
+  background-color: white;
+}
+
+.cart-row-trash {
+  color: white;
+  background-color: #cc2b2b;
+}
+
+.cart-row-trash:active {
+  color: #cc2b2b;
+  background-color: white;
+}
+
+.cart-row-details {
+  max-height: 0;
+  opacity: 0;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease;
+}
+
+.cart-row.expanded .cart-row-details {
+  max-height: 400px; 
+  opacity: 1;
+}
+
+.cart-row-details-inner {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 20px 20px;
+  border-top: 1px solid rgba(255, 69, 0, 0.3);
+  padding-top: 16px;
+}
+
+.cart-row-image-large {
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 12px;
+}
+
+.cart-row-details-text h3 {
+  color: orangered;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.cart-row-company {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.cart-row-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.cart-row-price {
+  color: orangered;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.cart-footer {
+  max-width: 900px;
+  margin: 2rem auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-top: 1px solid orangered;
+}
+
+.cart-total {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: orangered;
+}
+
+.cart-checkout {
+  background-color: rgb(255, 68, 0);
+  color: white;
+  font-weight: 700;
+  padding: 12px 32px;
+  border: 1px solid orangered;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart-checkout:hover {
+  background-color: black;
+  color: orangered;
+}
