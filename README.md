@@ -94,3 +94,34 @@ npm run dev
 ## Where it stands
 
 Storefront, auth, cart, and the admin dashboard all work end to end. Checkout and payment integration are next — right now you can fill a cart, but there's no way to actually pay for it yet. That's the honest state of the project as of this commit, not a "coming soon" I'll forget about.
+
+
+## Screenshots
+
+### Homepage
+
+![XMART Homepage](./screenshots/Homepage.png)
+
+### Products Grid Designs
+
+![XMART Products](./screenshots/ProductsGird.png)
+
+### Login/Create Modal
+
+![XMART Dashboard](./screenshots/Login_Modal.png)
+
+
+### Admin Dashboard
+
+![XMART Dashboard](./screenshots/Dashboard.png)
+
+### Admin User Management 
+
+![XMART Dashboard](./screenshots/User_Management.png)
+
+### Category Pages
+
+![XMART Dashboard](./screenshots/Categories.png)
+
+
+
