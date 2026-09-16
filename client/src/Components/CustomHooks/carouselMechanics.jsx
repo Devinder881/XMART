@@ -18,17 +18,21 @@ export default function useCarouselMechanics(numberOfBanners) {
   const Right = () => {
     pauseAutoPlay();
 
-    setCurrentBanner((current) =>
-      current >= numberOfBanners - 1 ? 0 : current + 1,
-    );
+    setTimeout(() => {
+      setCurrentBanner((current) =>
+        current >= numberOfBanners - 1 ? 0 : current + 1,
+      );
+    }, 300);
   };
 
   const Left = () => {
     pauseAutoPlay();
 
-    setCurrentBanner((current) =>
-      current <= 0 ? numberOfBanners - 1 : current - 1,
-    );
+    setTimeout(() => {
+      setCurrentBanner((current) =>
+        current <= 0 ? numberOfBanners - 1 : current - 1,
+      );
+    }, 300);
   };
 
   useEffect(() => {
@@ -40,7 +44,6 @@ export default function useCarouselMechanics(numberOfBanners) {
 
     return () => clearInterval(interval);
   }, [isAutoplay]);
-
 
   const [isDragging, setIsDragging] = useState(false);
   const dragStartX = useRef(0);

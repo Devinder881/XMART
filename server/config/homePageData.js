@@ -7,13 +7,9 @@ const seedData = require('./seedData')
 const homePageData = [
     {
         id: 1,
-
         section: 'festiveDeals',
-
         order: 1,
-
         type: "Grid",
-
         objects: [
             {
                 title: 'Deals you might like in Appliances',
@@ -60,13 +56,9 @@ const homePageData = [
     },
     {
         id: 2,
-
         section: 'bestSellers',
-
-        order: 2,
-
+        order: 1,
         type: "Carousel",
-
         objects: [
             {
                 title: "Up to 40% off | Best deals",
@@ -92,9 +84,8 @@ const homePageData = [
     {
         id: 3,
         section: "discountedProducts",
-        order: 3,
+        order: 1,
         type: "hybridGrid",
-
         objects: [
             {
                 title: 'G-Shock Limited Edition',
@@ -135,150 +126,246 @@ const homePageData = [
     {
         id: 4,
         section: "featuredCategory",
-        order: 4,
+        order: 1,
         type: 'productRow',
         objects: [
             {
-                title: 'Sony Aplha | 17-70mm F/2.8 Di III-A VC RXD Camera Lenses for Sony APS-C mirrorless Camera - Black',
-                Price: 14999,
-                company: 'Sony',
-                type: 'camera',
+                title: 'Apple MacBook Air 13-inch M4 Chip Laptop - 16GB RAM, 256GB SSD - Midnight',
+                Price: 89999,
+                company: 'Apple',
+                type: 'laptop',
                 category: 'tech',
-                url: 'https://res.cloudinary.com/dkl30c3oc/image/upload/v1787131647/SONYlENS30MM.jpg',
-                directURL: 'https://www.amazon.in/s?k=sony+lens&crid=1IVA0JE6F37H2&sprefix=sony+lens%2Caps%2C321&ref=nb_sb_noss_1',
-                deliveryDate: 'Sunday, August 25',
-            },
-            {
-                title: 'Sony Aplha | 17-70mm F/2.8 Di III-A VC RXD Camera Lenses for Sony APS-C mirrorless Camera - Black',
-                Price: 14999,
-                company: 'Sony',
-                type: 'camera',
-                category: 'tech',
-                url: 'https://res.cloudinary.com/dkl30c3oc/image/upload/v1787131647/SONYlENS30MM.jpg',
-                directURL: 'https://www.amazon.in/s?k=sony+lens&crid=1IVA0JE6F37H2&sprefix=sony+lens%2Caps%2C321&ref=nb_sb_noss_1',
-                deliveryDate: 'Sunday, August 25',
-            },
-            {
-                title: 'Sony Aplha | 17-70mm F/2.8 Di III-A VC RXD Camera Lenses for Sony APS-C mirrorless Camera - Black',
-                Price: 14999,
-                company: 'Sony',
-                type: 'camera',
-                category: 'tech',
-                url: 'https://res.cloudinary.com/dkl30c3oc/image/upload/v1787131647/SONYlENS30MM.jpg',
-                directURL: 'https://www.amazon.in/s?k=sony+lens&crid=1IVA0JE6F37H2&sprefix=sony+lens%2Caps%2C321&ref=nb_sb_noss_1',
-                deliveryDate: 'Sunday, August 25',
-            },
-            {
-                title: 'Sony Aplha | 17-70mm F/2.8 Di III-A VC RXD Camera Lenses for Sony APS-C mirrorless Camera - Black',
-                Price: 14999,
-                company: 'Sony',
-                type: 'camera',
-                category: 'tech',
-                url: 'https://res.cloudinary.com/dkl30c3oc/image/upload/v1787131647/SONYlENS30MM.jpg',
-                directURL: 'https://www.amazon.in/s?k=sony+lens&crid=1IVA0JE6F37H2&sprefix=sony+lens%2Caps%2C321&ref=nb_sb_noss_1',
-                deliveryDate: 'Sunday, August 25',
-            },
-            {
-                title: 'Sony Aplha | 17-70mm F/2.8 Di III-A VC RXD Camera Lenses for Sony APS-C mirrorless Camera - Black',
-                Price: 14999,
-                company: 'Sony',
-                type: 'camera',
-                category: 'tech',
-                url: 'https://res.cloudinary.com/dkl30c3oc/image/upload/v1787131647/SONYlENS30MM.jpg',
-                directURL: 'https://www.amazon.in/s?k=sony+lens&crid=1IVA0JE6F37H2&sprefix=sony+lens%2Caps%2C321&ref=nb_sb_noss_1',
-                deliveryDate: 'Sunday, August 25',
-            },
-            {
-                title: 'Sony Aplha | 17-70mm F/2.8 Di III-A VC RXD Camera Lenses for Sony APS-C mirrorless Camera - Black',
-                Price: 14999,
-                company: 'Sony',
-                type: 'camera',
-                category: 'tech',
-                url: 'https://res.cloudinary.com/dkl30c3oc/image/upload/v1787131647/SONYlENS30MM.jpg',
-                directURL: 'https://www.amazon.in/s?k=sony+lens&crid=1IVA0JE6F37H2&sprefix=sony+lens%2Caps%2C321&ref=nb_sb_noss_1',
-                deliveryDate: 'Sunday, August 25',
-            },
-            {
-                title: 'Sony Aplha | 17-70mm F/2.8 Di III-A VC RXD Camera Lenses for Sony APS-C mirrorless Camera - Black',
-                Price: 14999,
-                company: 'Sony',
-                type: 'camera',
-                category: 'tech',
-                url: 'https://res.cloudinary.com/dkl30c3oc/image/upload/v1787131647/SONYlENS30MM.jpg',
-                directURL: 'https://www.amazon.in/s?k=sony+lens&crid=1IVA0JE6F37H2&sprefix=sony+lens%2Caps%2C321&ref=nb_sb_noss_1',
-                deliveryDate: 'Sunday, August 25',
-            },
-            {
-                title: 'Sony Aplha | 17-70mm F/2.8 Di III-A VC RXD Camera Lenses for Sony APS-C mirrorless Camera - Black',
-                Price: 14999,
-                company: 'Sony',
-                type: 'camera',
-                category: 'tech',
-                url: 'https://res.cloudinary.com/dkl30c3oc/image/upload/v1787131647/SONYlENS30MM.jpg',
-                directURL: 'https://www.amazon.in/s?k=sony+lens&crid=1IVA0JE6F37H2&sprefix=sony+lens%2Caps%2C321&ref=nb_sb_noss_1',
-                deliveryDate: 'Sunday, August 25',
-            },
-            {
-                title: 'Sony Aplha | 17-70mm F/2.8 Di III-A VC RXD Camera Lenses for Sony APS-C mirrorless Camera - Black',
-                Price: 14999,
-                company: 'Sony',
-                type: 'camera',
-                category: 'tech',
-                url: 'https://res.cloudinary.com/dkl30c3oc/image/upload/v1787131647/SONYlENS30MM.jpg',
-                directURL: 'https://www.amazon.in/s?k=sony+lens&crid=1IVA0JE6F37H2&sprefix=sony+lens%2Caps%2C321&ref=nb_sb_noss_1',
-                deliveryDate: 'Sunday, August 25',
-            },
-            {
-                title: 'Sony Aplha | 17-70mm F/2.8 Di III-A VC RXD Camera Lenses for Sony APS-C mirrorless Camera - Black',
-                Price: 14999,
-                company: 'Sony',
-                type: 'camera',
-                category: 'tech',
-                url: 'https://res.cloudinary.com/dkl30c3oc/image/upload/v1787131647/SONYlENS30MM.jpg',
-                directURL: 'https://www.amazon.in/s?k=sony+lens&crid=1IVA0JE6F37H2&sprefix=sony+lens%2Caps%2C321&ref=nb_sb_noss_1',
-                deliveryDate: 'Sunday, August 25',
-            },
-            {
-                title: 'Sony Aplha | 17-70mm F/2.8 Di III-A VC RXD Camera Lenses for Sony APS-C mirrorless Camera - Black',
-                Price: 14999,
-                company: 'Sony',
-                type: 'camera',
-                category: 'tech',
-                url: 'https://res.cloudinary.com/dkl30c3oc/image/upload/v1787131647/SONYlENS30MM.jpg',
-                directURL: 'https://www.amazon.in/s?k=sony+lens&crid=1IVA0JE6F37H2&sprefix=sony+lens%2Caps%2C321&ref=nb_sb_noss_1',
-                deliveryDate: 'Sunday, August 25',
-            },
-            {
-                title: 'Sony Aplha | 17-70mm F/2.8 Di III-A VC RXD Camera Lenses for Sony APS-C mirrorless Camera - Black',
-                Price: 14999,
-                company: 'Sony',
-                type: 'camera',
-                category: 'tech',
-                url: 'https://res.cloudinary.com/dkl30c3oc/image/upload/v1787131647/SONYlENS30MM.jpg',
-                directURL: 'https://www.amazon.in/s?k=sony+lens&crid=1IVA0JE6F37H2&sprefix=sony+lens%2Caps%2C321&ref=nb_sb_noss_1',
-                deliveryDate: 'Sunday, August 25',
-            },
-            {
-                title: 'Sony Aplha | 17-70mm F/2.8 Di III-A VC RXD Camera Lenses for Sony APS-C mirrorless Camera - Black',
-                Price: 14999,
-                company: 'Sony',
-                type: 'camera',
-                category: 'tech',
-                url: 'https://res.cloudinary.com/dkl30c3oc/image/upload/v1787131647/SONYlENS30MM.jpg',
-                directURL: 'https://www.amazon.in/s?k=sony+lens&crid=1IVA0JE6F37H2&sprefix=sony+lens%2Caps%2C321&ref=nb_sb_noss_1',
-                deliveryDate: 'Sunday, August 25',
-            },
-            {
-                title: 'Sony Aplha | 17-70mm F/2.8 Di III-A VC RXD Camera Lenses for Sony APS-C mirrorless Camera - Black',
-                Price: 14999,
-                company: 'Sony',
-                type: 'camera',
-                category: 'tech',
-                url: 'https://res.cloudinary.com/dkl30c3oc/image/upload/v1787131647/SONYlENS30MM.jpg',
-                directURL: 'https://www.amazon.in/s?k=sony+lens&crid=1IVA0JE6F37H2&sprefix=sony+lens%2Caps%2C321&ref=nb_sb_noss_1',
-                deliveryDate: 'Sunday, August 25',
+                url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUm9g3SQqy9EduaCzBuvKseKk88TuIO4Sc4hnjM172CA&s=10',
+                directURL: '',
+                deliveryDate: 'Tuesday, August 26',
+                imageHint: 'Apple MacBook Air M4 Midnight 13 inch product image'
             },
 
+            {
+                title: 'Samsung Galaxy Buds3 Pro True Wireless Earbuds - Adaptive Noise Cancellation - White',
+                Price: 13999,
+                company: 'Samsung',
+                type: 'earbuds',
+                category: 'tech',
+                url: 'https://vader-prod.s3.amazonaws.com/1725462405-samsung-galaxy-buds-3-pro-product-jpg-66d876a0a841d.jpg',
+                directURL: '',
+                deliveryDate: 'Wednesday, August 27',
+                imageHint: 'Samsung Galaxy Buds3 Pro White product image'
+            },
+
+            {
+                title: 'Sony WH-1000XM5 Wireless Noise Cancelling Headphones - Black',
+                Price: 24999,
+                company: 'Sony',
+                type: 'headphones',
+                category: 'tech',
+                url: 'https://bankofelectronics.com/4045-medium_default/sony-wh-1000xm5-best-active-noise-cancelling-wireless-bluetooth-over-ear-headphones-battery-life-30-hrs-black.jpg',
+                directURL: '',
+                deliveryDate: 'Thursday, August 28',
+                imageHint: 'Sony WH-1000XM5 Black headphones product image'
+            },
+
+            {
+                title: 'Logitech G502 X LIGHTSPEED Wireless Gaming Mouse - Black',
+                Price: 12999,
+                company: 'Logitech',
+                type: 'gaming-mouse',
+                category: 'gaming',
+                url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIC3Co_0eUPIyz9MjC1IVaC5muFE4oUDEgp1ErODs1f4ony_N8rQcUCoX6&s=10',
+                directURL: '',
+                deliveryDate: 'Friday, August 29',
+                imageHint: 'Logitech G502 X Lightspeed black gaming mouse product image'
+            },
+
+            {
+                title: 'ASUS ROG Strix 27-inch QHD Gaming Monitor - 180Hz, 1ms - Black',
+                Price: 32999,
+                company: 'ASUS',
+                type: 'monitor',
+                category: 'gaming',
+                url: 'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/b2251eb0-316d-4ce0-974f-2d0b30e8255a.jpg;maxHeight=312;maxWidth=312?format=webp',
+                directURL: '',
+                deliveryDate: 'Saturday, August 30',
+                imageHint: 'ASUS ROG Strix 27 inch QHD gaming monitor product image'
+            },
+
+            {
+                title: 'Canon EOS R50 Mirrorless Camera with RF-S 18-45mm Lens - Black',
+                Price: 58999,
+                company: 'Canon',
+                type: 'camera',
+                category: 'tech',
+                url: 'https://m.media-amazon.com/images/I/81LskAU5h1L.jpg',
+                directURL: '',
+                deliveryDate: 'Sunday, August 31',
+                imageHint: 'Canon EOS R50 18-45mm black mirrorless camera product image'
+            },
+
+            {
+                title: "Nike Air Max Dn Men's Running Shoes - Black and White",
+                Price: 12995,
+                company: 'Nike',
+                type: 'shoes',
+                category: 'fashion',
+                url: 'https://www.prodirectsport.com/cdn/shop/files/1042227_main.jpg?v=1789336709',
+                directURL: '',
+                deliveryDate: 'Monday, September 1',
+                imageHint: "Nike Air Max Dn black white men's shoes product image"
+            },
+            {
+                title: "Levi's Men's 511 Slim Fit Stretch Jeans - Dark Indigo",
+                Price: 3999,
+                company: "Levi's",
+                type: 'jeans',
+                category: 'fashion',
+                url: 'https://lscoglobal.scene7.com/is/image/lscoglobal/MB_04511-6127_GLO_CL_FV?fmt=jpeg&qlt=70&resMode=sharp2&fit=crop,1&op_usm=0.6,0.6,8&wid=400&hei=400',
+                directURL: '',
+                deliveryDate: 'Tuesday, September 2',
+                imageHint: 'Levis 511 slim fit dark indigo jeans product image'
+            },
+
+            {
+                title: 'Casio G-Shock Analog-Digital Watch with Shock Resistant Design - Black',
+                Price: 10995,
+                company: 'Casio',
+                type: 'watch',
+                category: 'fashion',
+                url: 'https://www.preduce.com/cdn/shop/files/Casio_G-Shock_GA-V01SKE-8ADR_Analog-Digital_Transparent_Black11_1024x1024.png?v=1776677387',
+                directURL: '',
+                deliveryDate: 'Wednesday, September 3',
+                imageHint: 'Casio G Shock black analog digital watch product image'
+            },
+
+            {
+                title: 'Philips 3000 Series Air Fryer with Rapid Air Technology - Black',
+                Price: 8999,
+                company: 'Philips',
+                type: 'air-fryer',
+                category: 'appliances',
+                url: 'https://www.domesticappliances.philips.co.in/cdn/shop/files/NA221.jpg?v=1788253098',
+                directURL: '',
+                deliveryDate: 'Thursday, September 4',
+                imageHint: 'Philips 3000 Series black air fryer product image'
+            },
+            {
+                title: 'Apple iPad Air 11-inch M3 Wi-Fi Tablet - 128GB - Space Grey',
+                Price: 59999,
+                company: 'Apple',
+                type: 'tablet',
+                category: 'tech',
+                url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM0ZKFtMtf7yB26NN5okRh03wEox3op2Y41LzunI0NaA&s=10',
+                directURL: '',
+                deliveryDate: 'Friday, September 5',
+                imageHint: 'Apple iPad Air M3 11 inch Space Grey product image'
+            },
+
+            {
+                title: 'OnePlus 13 5G Smartphone - 16GB RAM, 512GB Storage - Black',
+                Price: 69999,
+                company: 'OnePlus',
+                type: 'smartphone',
+                category: 'tech',
+                url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH1jXNpBdkiqevepSNeQFZd7WHK-JxwzE_NU9Ilp37nA&s=10',
+                directURL: '',
+                deliveryDate: 'Saturday, September 6',
+                imageHint: 'OnePlus 13 black smartphone product image'
+            },
+
+            {
+                title: 'JBL Charge 5 Portable Bluetooth Speaker - Waterproof - Black',
+                Price: 14999,
+                company: 'JBL',
+                type: 'speaker',
+                category: 'tech',
+                url: 'https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/resize-w:450/jbl/494841401/0/JUYWYh7SvP-oZmyHVc6e-JBL-BT-SPEAKER-GO-5-BLACK-494841401-i-1.jpg',
+                directURL: '',
+                deliveryDate: 'Sunday, September 7',
+                imageHint: 'JBL Charge 5 black Bluetooth speaker product image'
+            },
+
+            {
+                title: 'Keychron K2 Wireless Mechanical Keyboard - RGB Backlight - Black',
+                Price: 8999,
+                company: 'Keychron',
+                type: 'keyboard',
+                category: 'gaming',
+                url: 'https://m.media-amazon.com/images/I/71Ab4+KeP1L.jpg',
+                directURL: '',
+                deliveryDate: 'Monday, September 8',
+                imageHint: 'Keychron K2 RGB mechanical keyboard black product image'
+            },
+
+            {
+                title: 'Razer BlackShark V2 Pro Wireless Gaming Headset - Black',
+                Price: 14999,
+                company: 'Razer',
+                type: 'gaming-headset',
+                category: 'gaming',
+                url: 'https://m.media-amazon.com/images/I/71Z9KK9-zvL.jpg',
+                directURL: '',
+                deliveryDate: 'Tuesday, September 9',
+                imageHint: 'Razer BlackShark V2 Pro black wireless gaming headset product image'
+            },
+
+            {
+                title: 'Adidas Ultraboost 5 Running Shoes - Core Black and White',
+                Price: 16999,
+                company: 'Adidas',
+                type: 'shoes',
+                category: 'fashion',
+                url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwQR4bhz6W6A4wTW9sIHXbYmvsqYRc3C599EUbkuDz7LnTpG5QdQWOgdfU&s=10',
+                directURL: '',
+                deliveryDate: 'Wednesday, September 10',
+                imageHint: 'Adidas Ultraboost 5 black white running shoes product image'
+            },
+
+            {
+                title: 'Puma Essential Regular Fit Hooded Sweatshirt - Black',
+                Price: 3499,
+                company: 'Puma',
+                type: 'hoodie',
+                category: 'fashion',
+                url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5WrkvLUbIrWJmYkEdRaeGroghYF3AooXZHzlOcNyzrnKNg2_fRpyVR44P&s=10',
+                directURL: '',
+                deliveryDate: 'Thursday, September 11',
+                imageHint: 'Puma black hooded sweatshirt product image'
+            },
+
+            {
+                title: 'Ray-Ban Aviator Classic Polarized Sunglasses - Gold and Green',
+                Price: 12900,
+                company: 'Ray-Ban',
+                type: 'sunglasses',
+                category: 'fashion',
+                url: 'https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/d/c/dc0d4b88053672611649.jpg',
+                directURL: '',
+                deliveryDate: 'Friday, September 12',
+                imageHint: 'Ray Ban Aviator Classic gold green polarized sunglasses product image'
+            },
+
+            {
+                title: 'Dyson V12 Detect Slim Cordless Vacuum Cleaner - Gold and Nickel',
+                Price: 54900,
+                company: 'Dyson',
+                type: 'vacuum-cleaner',
+                category: 'appliances',
+                url: 'https://m.media-amazon.com/images/I/51X+L9rMPsL._SL500_.jpg',
+                directURL: '',
+                deliveryDate: 'Saturday, September 13',
+                imageHint: 'Dyson V12 Detect Slim gold nickel vacuum cleaner product image'
+            },
+
+            {
+                title: 'Bose QuietComfort Ultra Wireless Noise Cancelling Earbuds - Black',
+                Price: 19900,
+                company: 'Bose',
+                type: 'earbuds',
+                category: 'tech',
+                url: 'https://avshack.in/cdn/shop/files/bose-quiet-comfort-ultra-earbuds-04.jpg?v=1733208459&width=1500',
+                directURL: '',
+                deliveryDate: 'Sunday, September 14',
+                imageHint: 'Bose QuietComfort Ultra black wireless earbuds product image'
+            },
         ]
     }
 

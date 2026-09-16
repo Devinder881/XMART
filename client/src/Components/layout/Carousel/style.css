@@ -8,7 +8,7 @@
   
   display: flex;
   overflow: hidden;
-
+background-color: #fa9223;
   cursor: grab;
 }
 

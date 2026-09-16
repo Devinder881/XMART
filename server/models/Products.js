@@ -23,7 +23,7 @@ const productSchema = new mongoose.Schema(
             type: String,
             required: [true, "Product Title Not Found!"],
             trim: true,
-            maxlength: [40, "Title should be under 40 characters!"],
+            maxlength: [50, "Title should be under 40 characters!"],
         },
 
         company: {
@@ -37,7 +37,7 @@ const productSchema = new mongoose.Schema(
             type: String,
             required: [true, "Product Description Not Found!"],
             trim: true,
-            maxlength: [200, "Description should be under 200 characters!"],
+            maxlength: [250, "Description should be under 200 characters!"],
         },
 
         price: {

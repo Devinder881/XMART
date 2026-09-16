@@ -1,6 +1,6 @@
 import Carousel from "../Components/layout/Carousel/Carousel";
 import Grid_UI from "../Components/layout/UI/Grid_UI/GridUI";
-import Carousel_UI from "../Components/layout/UI/Carousel_UI/CarouselUi";
+import Carousel_UI from "../Components/layout/UI/Carousel_UI/CarouselUI";
 import HybridGrid_UI from "../Components/layout/UI/HybridGrid_UI/HybridGridUI";
 import ProductRow_UI from "../Components/layout/UI/ProductRow_UI/ProductRowUI";
 
@@ -14,9 +14,9 @@ export default function Home() {
       <div style={{ minHeight: "100%" }}>
         <Carousel />
         <Grid_UI data={homepageData} order={1} type={"Grid"} />
-        <Carousel_UI data={homepageData} order={2} type={"Carousel"} />
-        <HybridGrid_UI data={homepageData} order={3} type={"hybridGrid"} />
-        <ProductRow_UI data={homepageData} order={4} type={"productRow"} />
+        <Carousel_UI data={homepageData} order={1} type={"Carousel"} />
+        <HybridGrid_UI data={homepageData} order={1} type={"hybridGrid"} />
+        <ProductRow_UI data={homepageData} order={1} type={"productRow"} />
       </div>
     </>
   );
