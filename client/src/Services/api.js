@@ -58,3 +58,6 @@ export const updateProduct = (productId, formData) =>
     API.put(`/admin/products/${productId}`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
     });
+
+
+

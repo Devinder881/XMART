@@ -15,7 +15,7 @@ import Cart from "./Pages/Cart";
 import CartProvider from "./Components/Context/cartContext";
 import AuthProvider from "./Components/Context/AuthContext";
 
-import NotFound from "./Pages/404/notFound";
+import NotFound from "../src/Pages/404/NotFound";
 import Checkout from "./Pages/Checkout";
 
 import ScrollToTop from "./Components/CustomHooks/scrollToTop";
