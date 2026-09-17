@@ -164,12 +164,13 @@
 }
 
 .cart-row.expanded .cart-row-details {
-  max-height: 400px; 
+  max-height: max-content;
   opacity: 1;
 }
 
 .cart-row-details-inner {
   display: flex;
+  flex-direction: column;
   gap: 1.5rem;
   padding: 0 20px 20px;
   border-top: 1px solid rgba(255, 69, 0, 0.3);
@@ -242,4 +243,16 @@
 .cart-checkout:hover {
   background-color: black;
   color: orangered;
+}
+
+@media (max-width: 750px) {
+  .cart-row-details-inner {
+    height: max-content;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .cart-row-image-large {
+    width: unset;
+  }
 }

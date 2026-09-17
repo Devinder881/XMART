@@ -80,10 +80,10 @@
   width: 30%;
   aspect-ratio: 4 / 3;
 
-  background-color: cyan;
+  background-color: white;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 
   border-radius: 12px 0px 0px 12px;
 }

@@ -5,8 +5,8 @@
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   z-index: 1000;
   padding: 20px;
 }
@@ -133,6 +133,7 @@
 .modal-thumbnail-column {
   width: 20%;
   height: 320px;
+  min-height: 60px;
 
   display: flex;
   flex-direction: column;
@@ -165,4 +166,46 @@
 
 .modal-thumbnail.active {
   border-color: orangered;
+}
+
+
+@media (max-width: 750px) {
+.modal-image-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+}
+
+.modal-product-image{
+  width: unset;
+}
+
+.modal-thumbnail-column{
+  flex-direction: row;
+}
+}
+
+
+
+
+@media (max-width: 750px) {
+.modal-image-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+}
+
+.modal-product-image{
+  width: unset;
+}
+
+.modal-thumbnail-column{
+  width: 100%;
+  height: unset;
+  flex-direction: row;
+}
 }
