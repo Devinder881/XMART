@@ -1,6 +1,8 @@
 import "./style.css";
 import useProductsData from "../../../../Services/productsDataRequest";
 import { useCart } from "../../../Context/cartContext";
+import { useAuth } from "../../../Context/AuthContext";
+import { useModal } from "../../../Context/ModalContext";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import Product_UI_Model from "./Product_Modal_UI/ProductModalUI";
@@ -12,7 +14,9 @@ export default function Products_UI({
   const { productsData, loading } = useProductsData();
   const { addToCart } = useCart();
   const [addedProduct, setAddedProduct] = useState(null);
-  const [selectedProduct, setSelectedProduct] = useState(null); 
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const { openLogin } = useModal();
+  const { user } = useAuth();
 
   if (!productsData || productsData.length === 0) return null;
 
@@ -56,7 +60,7 @@ export default function Products_UI({
             <div
               key={product._id ?? index}
               className="Product-block"
-              onClick={() => setSelectedProduct(product)} 
+              onClick={() => setSelectedProduct(product)}
             >
               <div
                 className="Product-image"
@@ -72,7 +76,11 @@ export default function Products_UI({
                 <motion.button
                   className="cartButtonOuter"
                   onClick={(e) => {
-                    e.stopPropagation(); 
+                    e.stopPropagation();
+                    if (!user) {
+                      openLogin();
+                      return;
+                    }
                     handleAddToCart(product._id);
                   }}
                   whileTap={{ scale: 0.95 }}

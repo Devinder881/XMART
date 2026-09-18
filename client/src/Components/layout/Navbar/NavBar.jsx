@@ -12,12 +12,14 @@ import {
 import { motion, AnimatePresence } from "motion/react";
 import { useAuth } from "../../Context/AuthContext";
 import { useCart } from "../../Context/cartContext";
+import { useModal } from "../../Context/ModalContext";
 
-const Navbar = ({ onLoginClick }) => {
+const Navbar = () => {
   const Navigate = useNavigate();
   const isMobile = useIsMobileView(1170);
   const scrolled = useWindowScrolled();
   const location = useLocation();
+  const { openLogin } = useModal();
 
   const navigationLinks = [
     { name: "Home", path: "/", action: () => Navigate("/") },
@@ -124,10 +126,9 @@ const Navbar = ({ onLoginClick }) => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-
   const toggleSearch = () => {
     setSearchBar((prev) => !prev);
-    setOpenMenu(false); 
+    setOpenMenu(false);
   };
 
   const toggleMenu = () => {
@@ -151,12 +152,12 @@ const Navbar = ({ onLoginClick }) => {
     }
   }, [searchBar]);
 
-  // Cart Context 
+  // Cart Context
 
   const { cartCount } = useCart();
 
   const openCart = () => {
-    user ? Navigate("/Cart") : onLoginClick();
+    user ? Navigate("/Cart") : openLogin();
   };
 
   return (
@@ -168,7 +169,7 @@ const Navbar = ({ onLoginClick }) => {
           </Link>
 
           {isMobile ? (
-            // Mobile/Tablets 
+            // Mobile/Tablets
             <div>
               <div className="mobile-nav-right-option">
                 <FontAwesomeIcon
@@ -206,7 +207,7 @@ const Navbar = ({ onLoginClick }) => {
                           </motion.div>
                         ) : (
                           <motion.div
-                            onClick={onLoginClick}
+                            onClick={openLogin}
                             className="nav-login-mobile"
                             variants={itemVariants}
                           >
@@ -281,7 +282,7 @@ const Navbar = ({ onLoginClick }) => {
                   <span className="username-tooltip">Click to logout</span>
                 </div>
               ) : (
-                <div onClick={onLoginClick} className="nav-login">
+                <div onClick={openLogin} className="nav-login">
                   Login
                 </div>
               )}
@@ -317,4 +318,3 @@ const Navbar = ({ onLoginClick }) => {
 };
 
 export default Navbar;
-

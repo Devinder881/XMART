@@ -5,14 +5,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { login, signup } from "../../../Services/api";
 import { useAuth } from "../../../Components/Context/AuthContext";
+import { useModal } from "../../../Components/Context/ModalContext";
 
-export default function Login_Options_Modal({ isOpen, onClose }) {
+export default function Login_Options_Modal() {
   const [input, setInput] = useState({ name: "", email: "", password: "" });
   const [showPassword, setShowPassword] = useState(false);
   const [isSignupMode, setIsSignupMode] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const { login: loginContext } = useAuth();
+  const { loginOpen, closeLogin } = useModal();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,17 +37,16 @@ export default function Login_Options_Modal({ isOpen, onClose }) {
       loginContext(response.data.user, response.data.token);
       onClose();
     } catch (err) {
-
       setError(err.response?.data?.message || "Something went wrong.");
     } finally {
       setLoading(false);
     }
   };
 
-  if (!isOpen) return null;
+  if (!loginOpen) return null;
 
   return createPortal(
-    <div className="windowOverlay" onClick={onClose}>
+    <div className="windowOverlay" onClick={closeLogin}>
       <div className="modal-window" onClick={(e) => e.stopPropagation()}>
         <form className="loginForm" onSubmit={handleSubmit}>
           <h2 className="loginForm-title">
@@ -147,8 +148,8 @@ export default function Login_Options_Modal({ isOpen, onClose }) {
 
           <div className="warningConatiner">
             <div className="warning">
-              Important! Please note down your password — Human brain has
-              good capability of forgetting things.
+              Important! Please note down your password — Human brain has good
+              capability of forgetting things.
             </div>
           </div>
         </form>

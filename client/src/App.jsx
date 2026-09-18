@@ -14,6 +14,7 @@ import Footer from "./Components/layout/Footer/Footer";
 import Cart from "./Pages/Cart";
 import CartProvider from "./Components/Context/cartContext";
 import AuthProvider from "./Components/Context/AuthContext";
+import { ModalProvider } from "./Components/Context/ModalContext";
 
 import NotFound from "../src/Pages/404/NotFound";
 import Checkout from "./Pages/Checkout";
@@ -33,59 +34,59 @@ import DashboardManageProducts from "./Pages/Admin/Dashboard/DashboardManageProd
 import DashboardEditProduct from "./Pages/Admin/Dashboard/DashboardEditProduct";
 
 function App() {
-  const [loginOpen, setLoginOpen] = useState(false);
   return (
     <>
       <AuthProvider>
         <CartProvider>
-          <BrowserRouter>
-            <ScrollToTop />
-            <Navbar onLoginClick={() => setLoginOpen(true)} />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/Trending" element={<Trending />} />
-              <Route path="/Electronics" element={<Electronics />} />
-              <Route path="/Discover" element={<Discover />} />
-              <Route path="/Clothing" element={<Clothing />} />
-              <Route path="*" element={<NotFound />} />
-              <Route path="/Checkout" element={<Checkout />} />
-              <Route
-                path="/Cart"
-                element={
-                  <CartProtectedRoute>
-                    <Cart />
-                  </CartProtectedRoute>
-                }
-              />
-              <Route
-                path="/Dashboard"
-                element={
-                  <DashBoardProtectedRoute>
-                    <Dashboard />
-                  </DashBoardProtectedRoute>
-                }
-              >
-                <Route index element={<DashboardOverview />} />
-                <Route path="Users" element={<DashboardUsers />} />
-                <Route path="Products/Add" element={<DashboardAddProduct />} />
-
+          <ModalProvider>
+            <BrowserRouter>
+              <ScrollToTop />
+              <Navbar />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/Trending" element={<Trending />} />
+                <Route path="/Electronics" element={<Electronics />} />
+                <Route path="/Discover" element={<Discover />} />
+                <Route path="/Clothing" element={<Clothing />} />
+                <Route path="*" element={<NotFound />} />
+                <Route path="/Checkout" element={<Checkout />} />
                 <Route
-                  path="Products/Manage"
-                  element={<DashboardManageProducts />}
+                  path="/Cart"
+                  element={
+                    <CartProtectedRoute>
+                      <Cart />
+                    </CartProtectedRoute>
+                  }
                 />
                 <Route
-                  path="Products/Edit/:productId"
-                  element={<DashboardEditProduct />}
-                />
-              </Route>
-            </Routes>
-            <Login_Options_Modal
-              isOpen={loginOpen}
-              onClose={() => setLoginOpen(false)}
-            />
+                  path="/Dashboard"
+                  element={
+                    <DashBoardProtectedRoute>
+                      <Dashboard />
+                    </DashBoardProtectedRoute>
+                  }
+                >
+                  <Route index element={<DashboardOverview />} />
+                  <Route path="Users" element={<DashboardUsers />} />
+                  <Route
+                    path="Products/Add"
+                    element={<DashboardAddProduct />}
+                  />
 
-            <Footer />
-          </BrowserRouter>
+                  <Route
+                    path="Products/Manage"
+                    element={<DashboardManageProducts />}
+                  />
+                  <Route
+                    path="Products/Edit/:productId"
+                    element={<DashboardEditProduct />}
+                  />
+                </Route>
+              </Routes>
+              <Login_Options_Modal />
+              <Footer />
+            </BrowserRouter>
+          </ModalProvider>
         </CartProvider>
       </AuthProvider>
     </>
