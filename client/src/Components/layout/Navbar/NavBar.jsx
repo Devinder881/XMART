@@ -227,19 +227,25 @@ const Navbar = () => {
                         </motion.div>
                       ))}
 
-                      <motion.div
-                        className="cartIcon-wrapper-mobile"
-                        onClick={openCart}
-                        variants={itemVariants}
-                      >
-                        <FontAwesomeIcon
-                          icon={faCartShopping}
-                          className="cartIcon-mobile"
-                        />
-                        {cartCount > 0 && (
-                          <span className="cart-badge-mobile">{cartCount}</span>
-                        )}
-                      </motion.div>
+                      {user?.role !== "Admin" ? (
+                        <motion.div
+                          className="cartIcon-wrapper-mobile"
+                          onClick={openCart}
+                          variants={itemVariants}
+                        >
+                          <FontAwesomeIcon
+                            icon={faCartShopping}
+                            className="cartIcon-mobile"
+                          />
+                          {cartCount > 0 && (
+                            <span className="cart-badge-mobile">
+                              {cartCount}
+                            </span>
+                          )}
+                        </motion.div>
+                      ) : (
+                        <></>
+                      )}
                     </div>
                   </motion.div>
                 )}
@@ -264,12 +270,21 @@ const Navbar = () => {
                 onClick={toggleSearch}
               />
 
-              <div className="cartIcon-wrapper" onClick={openCart}>
-                <FontAwesomeIcon icon={faCartShopping} className="cartIcon" />
-                {cartCount > 0 && (
-                  <span className="cart-badge">{cartCount}</span>
-                )}
-              </div>
+              {user?.role !== "Admin" ? (
+                <>
+                  <div className="cartIcon-wrapper" onClick={openCart}>
+                    <FontAwesomeIcon
+                      icon={faCartShopping}
+                      className="cartIcon"
+                    />
+                    {cartCount > 0 && (
+                      <span className="cart-badge">{cartCount}</span>
+                    )}
+                  </div>
+                </>
+              ) : (
+                <></>
+              )}
 
               {user ? (
                 <div className="nav-user-wrapper">

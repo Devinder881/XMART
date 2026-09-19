@@ -35,7 +35,7 @@ export default function Login_Options_Modal() {
       const response = await requestFn(payload);
 
       loginContext(response.data.user, response.data.token);
-      onClose();
+      closeLogin();
     } catch (err) {
       setError(err.response?.data?.message || "Something went wrong.");
     } finally {

@@ -6,7 +6,14 @@ exports.getCart = async (req, res) => {
         const user = await User.findById(req.user.id)
             .populate("cart.productId");
 
-        const formattedCart = user.cart.map((item) => ({
+        const validCartItems = user.cart.filter((item) => item.productId !== null);
+
+        if (validCartItems.length !== user.cart.length) {
+            user.cart = validCartItems;
+            await user.save();
+        }
+
+        const formattedCart = validCartItems.cart.map((item) => ({
             _id: item.productId._id,
             title: item.productId.title,
             image: item.productId.image,

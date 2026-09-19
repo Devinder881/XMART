@@ -7,16 +7,16 @@ import {
   updateCartItem,
 } from "../../Services/api";
 
-
 const CartContext = createContext();
 
 export default function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
   const { user } = useAuth();
+  const isAdmin = user?.role === "Admin";
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!user) {
+    if (!user || isAdmin) {
       setCartItems([]);
       setLoading(false);
       return;
@@ -28,7 +28,7 @@ export default function CartProvider({ children }) {
         const response = await getCart();
         setCartItems(response.data);
       } catch (err) {
-        console.error(err);
+        console.error(err.message);
       } finally {
         setLoading(false);
       }
@@ -37,17 +37,19 @@ export default function CartProvider({ children }) {
   }, [user]);
 
   const addToCart = async (productId, quantity = 1) => {
+    if (isAdmin) return;
     await addToCartApi(productId, quantity);
     const response = await getCart();
     setCartItems(response.data);
-    
   };
 
   const increment = async (productId, currentQty) => {
     const response = await updateCartItem(productId, currentQty + 1);
     setCartItems((prev) =>
       prev.map((item) =>
-        item._id === productId ? { ...item, quantity: response.data.item.quantity } : item,
+        item._id === productId
+          ? { ...item, quantity: response.data.item.quantity }
+          : item,
       ),
     );
   };
@@ -57,7 +59,9 @@ export default function CartProvider({ children }) {
     const response = await updateCartItem(productId, currentQty - 1);
     setCartItems((prev) =>
       prev.map((item) =>
-        item._id === productId ? { ...item, quantity: response.data.item.quantity } : item,
+        item._id === productId
+          ? { ...item, quantity: response.data.item.quantity }
+          : item,
       ),
     );
   };
@@ -92,4 +96,3 @@ export default function CartProvider({ children }) {
 }
 
 export const useCart = () => useContext(CartContext);
-
